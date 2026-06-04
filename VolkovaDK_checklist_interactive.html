@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -137,24 +138,17 @@
       <div class="cols" style="margin-top:16px;">
         <div>
           <h3>Три сильные стороны</h3>
-          <textarea id="strengths">• удачное расположение монитора
-• достаточная оперативная память
-• хорошая кабельная организация.</textarea>
+          <textarea id="strengths" placeholder="Например: удачное расположение монитора, достаточная оперативная память, хорошая кабельная организация."></textarea>
         </div>
         <div>
           <h3>Три проблемные зоны</h3>
-          <textarea id="problems">• нехватка пространства
-• плохое освещение
-• неудобное расположение клавиатуры.</textarea>
+          <textarea id="problems" placeholder="Например: нехватка пространства, плохое освещение, неудобное расположение клавиатуры."></textarea>
         </div>
       </div>
 
       <div style="margin-top:14px;">
         <h3>Три улучшения с наибольшим эффектом</h3>
-        <textarea id="improvements">• поднять монитор
-• добавить быстрый SSD
-• организовать кабели
-• улучшить освещение.</textarea>
+        <textarea id="improvements" placeholder="Например: поднять монитор, добавить быстрый SSD, организовать кабели, улучшить освещение."></textarea>
       </div>
 
       <div class="actions">
@@ -333,6 +327,22 @@ function setDefaultScores() {
   updateSummary();
 }
 
+function setDefaultTexts() {
+  const strengthsField = document.getElementById('strengths');
+  const problemsField = document.getElementById('problems');
+  const improvementsField = document.getElementById('improvements');
+  
+  if (!strengthsField.value || strengthsField.value === '') {
+    strengthsField.value = '• Удачное расположение монитора\n• Достаточная оперативная память\n• Хорошая кабельная организация';
+  }
+  if (!problemsField.value || problemsField.value === '') {
+    problemsField.value = '• Нехватка пространства\n• Плохое освещение\n• Неудобное расположение клавиатуры';
+  }
+  if (!improvementsField.value || improvementsField.value === '') {
+    improvementsField.value = '• Поднять монитор\n• Добавить быстрый SSD\n• Организовать кабели\n• Улучшить освещение';
+  }
+}
+
 function saveAll(){
   const scores = {};
   document.querySelectorAll('input[type="radio"]:checked').forEach(el => {
@@ -355,6 +365,8 @@ function loadAll(){
   const raw = localStorage.getItem('workspaceChecklistData');
   if(!raw){
     setDefaultScores();
+    setDefaultTexts();
+    saveAll(); // сохраняем начальные значения
     return;
   }
   try{
@@ -367,6 +379,8 @@ function loadAll(){
     document.getElementById('problems').value = data.problems || '';
     document.getElementById('improvements').value = data.improvements || '';
     updateSummary();
+    // если какие-то поля остались пустыми, заполняем стандартными текстами
+    setDefaultTexts();
   }catch(e){}
 }
 
@@ -384,3 +398,4 @@ loadAll();
 </script>
 </body>
 </html>
+```

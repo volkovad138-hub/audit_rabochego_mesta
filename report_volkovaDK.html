@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Шаблон отчёта студента</title>
+  <title>Отчёт Волковой Д.К. — Аудит рабочего пространства</title>
   <style>
     :root{
       --bg:#f4f7fc; --card:#ffffff; --text:#18212f; --muted:#5f6b7a; --line:#dde6f0;
@@ -27,12 +27,15 @@
     .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
     .card{border:1px solid var(--line);border-radius:18px;padding:16px;background:#fff;}
     .card h3{margin:0 0 8px;font-size:19px;}
-    .field, textarea, input[type="text"]{
-      width:100%; border:1px solid var(--line); border-radius:14px; padding:12px 14px;
-      font:inherit; color:var(--text); background:#fff;
+    .report-text{
+      background:#fbfcfe;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px 14px;
+      color:var(--text);
+      line-height:1.5;
+      white-space:pre-wrap;
     }
-    textarea{min-height:120px; resize:vertical;}
-    .small{min-height:90px;}
     .summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
     .sum-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;}
     .sum-card strong{display:block;font-size:14px;color:var(--muted);}
@@ -61,147 +64,100 @@
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <section class="hero">
-      <div class="eyebrow">Шаблон отчёта</div>
-      <h1>Аудит рабочего пространства и проект улучшения</h1>
-      <p>Заполните поля ниже, перенесите результаты из чек-листа и оформите собственную итоговую страницу.</p>
-      <div class="nav">
-        <a class="btn primary" href="index.html">Главное меню</a>
-        <a class="btn secondary" href="student_report_template.html">Отчёты команды</a>
-        <a class="btn secondary" href="VolkovaDK_checklist_interactive.html">Мой чек-лист</a>
-      </div>
-    </section>
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Индивидуальный отчёт</div>
+    <h1>Аудит домашнего рабочего пространства и проект улучшения</h1>
+    <p>Отчёт содержит анализ текущего состояния рабочего места, результаты чек-листа, ключевые наблюдения и план улучшений. Данные собраны на основе реального использования пространства.</p>
+    <div class="nav">
+      <a class="btn primary" href="index.html">Главное меню</a>
+      <a class="btn secondary" href="student_report_template.html">Отчёты команды</a>
+      <a class="btn secondary" href="VolkovaDK_checklist_interactive.html">Мой чек-лист</a>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>1. Общая информация</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>ФИО / автор</h3>
-          <input type="text" id="studentName" class="field" placeholder="Введите имя автора" value="Волкова Дарья Константиновна">
-        </div>
-        <div class="card">
-          <h3>Объект анализа</h3>
-          <input type="text" id="objectName" class="field" placeholder="Например: домашнее рабочее место, аудитория, офисный стол" value="Домашнее рабочее место" />
-        </div>
+  <section class="section">
+    <h2>1. Общая информация</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>ФИО / автор</h3>
+        <div class="report-text">Волкова Дарья Константиновна</div>
       </div>
-      <div style="margin-top:14px;">
-        <h3>Назначение рабочего пространства</h3>
-        <textarea id="purpose" placeholder="Кратко опишите, для каких задач используется это место: учёба, документы, аналитика, программирование, графика и т.д.">Играть в компьютерные игры, выполнять задания из университета (курсовые, практики, отчёты, лабораторные работы, эссе, доклады и пр.), заниматься диджитал рисованием</textarea>
+      <div class="card">
+        <h3>Объект анализа</h3>
+        <div class="report-text">Домашнее рабочее место</div>
       </div>
-    </section>
+    </div>
+    <div style="margin-top:14px;">
+      <h3>Назначение рабочего пространства</h3>
+      <div class="report-text">Играть в компьютерные игры, выполнять задания из университета (курсовые, практики, отчёты, лабораторные работы, эссе, доклады и пр.), заниматься диджитал рисованием.</div>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>2. Итоги чек-листа</h2>
-      <div class="summary">
-        <div class="sum-card"><strong>Набрано баллов</strong><div class="big" id="sum">—</div></div>
-        <div class="sum-card"><strong>Максимум</strong><div class="big" id="max">—</div></div>
-        <div class="sum-card"><strong>Процент</strong><div class="big" id="percent">—</div></div>
-        <div class="sum-card"><strong>Результат</strong><div id="interp" style="margin-top:8px; font-weight:700;">—</div></div>
-      </div>
-    </section>
+  <section class="section">
+    <h2>2. Итоги чек-листа</h2>
+    <div class="summary">
+      <div class="sum-card"><strong>Набрано баллов</strong><div class="big">82</div></div>
+      <div class="sum-card"><strong>Максимум</strong><div class="big">92</div></div>
+      <div class="sum-card"><strong>Процент</strong><div class="big">89%</div></div>
+      <div class="sum-card"><strong>Результат</strong><div style="margin-top:8px; font-weight:700;">Рабочее место организовано грамотно и соответствует задачам</div></div>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>3. Ключевые наблюдения</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Сильные стороны</h3>
-          <textarea id="strengths" class="small" placeholder="Перенесите из чек-листа или сформулируйте заново.">2 монитора, один из которых графический планшет (huion kamvas 20). Наличие принтера. Удобное кресло.</textarea>
-        </div>
-        <div class="card">
-          <h3>Проблемные зоны</h3>
-          <textarea id="problems" class="small" placeholder="Опишите основные ограничения и слабые места.">Позади обоих экранов довольно много проводов, ведущих к системнику. Лежат неорганизованно. Монитор (который не графический планшет) издаёт иногда пищащие звуки. Системник стоит на полу, между столом и стеной. На него не попадает свет, но вот листья с растений на подоконнике — иногда.</textarea>
-        </div>
+  <section class="section">
+    <h2>3. Ключевые наблюдения</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Сильные стороны</h3>
+        <div class="report-text">2 монитора, один из которых графический планшет (huion kamvas 20). Наличие принтера. Удобное кресло.</div>
       </div>
-      <div style="margin-top:14px;">
-        <h3>Три улучшения с наибольшим эффектом</h3>
-        <textarea id="improvements" placeholder="Укажите конкретные изменения и ожидаемый результат.">1. Поставить под столом небольшую подставку для системника (так, чтобы она не мешала ногам, но на неё не попадали листья). 2. Купить новый монитор (в идеале матовый) вместо пищащего, поставить его на кронштейн. 3. Убраться в комнате, чтобы не редактировать свою неубранную комнату с помощью ИИ.</textarea>
+      <div class="card">
+        <h3>Проблемные зоны</h3>
+        <div class="report-text">Позади обоих экранов довольно много проводов, ведущих к системнику. Лежат неорганизованно. Монитор (который не графический планшет) издаёт иногда пищащие звуки. Системник стоит на полу, между столом и стеной. На него не попадает свет, но вот листья с растений на подоконнике — иногда.</div>
       </div>
-    </section>
+    </div>
+    <div style="margin-top:14px;">
+      <h3>Три улучшения с наибольшим эффектом</h3>
+      <div class="report-text">1. Поставить под столом небольшую подставку для системника (так, чтобы она не мешала ногам, но на неё не попадали листья).<br>
+      2. Купить новый монитор (в идеале матовый) вместо пищащего, поставить его на кронштейн.<br>
+      3. Убраться в комнате, чтобы не редактировать свою неубранную комнату с помощью ИИ.</div>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>4. Проект улучшения</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Что можно улучшить без существенных затрат</h3>
-          <textarea id="noBudget" class="small" placeholder="Например: поднять монитор, изменить расположение клавиатуры, организовать кабели, переставить технику.">Убраться в комнате, поставить подставку для системника (самодельную или недорогую из подручных материалов).</textarea>
-        </div>
-        <div class="card">
-          <h3>Что потребует бюджета, но даст заметный эффект</h3>
-          <textarea id="withBudget" class="small" placeholder="Например: заменить монитор, увеличить ОЗУ, поставить SSD, улучшить освещение, сменить стол или кресло.">Новый матовый монитор (желательно с кронштейном для настенного крепления или на стойке), возможно небольшой освежитель воздуха или вентилятор на лето.</textarea>
-        </div>
+  <section class="section">
+    <h2>4. Проект улучшения</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Что можно улучшить без существенных затрат</h3>
+        <div class="report-text">Убраться в комнате, поставить подставку для системника (самодельную или недорогую из подручных материалов).</div>
       </div>
-      <div style="margin-top:14px;">
-        <h3>Обоснование проекта</h3>
-        <textarea id="justification" placeholder="Объясните, почему предложенные улучшения полезны с точки зрения эргономики, техники, производительности, срока службы и рациональности закупки.">Подставка для системника поднимет его с пола: снизится риск попадания пыли и листьев, улучшится циркуляция воздуха, что продлит срок службы компонентов. Замена пищащего монитора на новый матовый экран решит проблему раздражения от звуков и бликов, снизит усталость глаз при долгой работе за графикой и играми. Кронштейн освободит место на столе и позволит настроить оптимальную высоту. Уборка — бесплатный способ улучшить эстетику и психологический комфорт. Вентилятор или освежитель воздуха — необязательная, но приятная опция для лета.</textarea>
+      <div class="card">
+        <h3>Что потребует бюджета, но даст заметный эффект</h3>
+        <div class="report-text">Новый матовый монитор (желательно с кронштейном для настенного крепления или на стойке), возможно небольшой освежитель воздуха или вентилятор на лето.</div>
       </div>
-    </section>
+    </div>
+    <div style="margin-top:14px;">
+      <h3>Обоснование проекта</h3>
+      <div class="report-text">Подставка для системника поднимет его с пола: снизится риск попадания пыли и листьев, улучшится циркуляция воздуха, что продлит срок службы компонентов. Замена пищащего монитора на новый матовый экран решит проблему раздражения от звуков и бликов, снизит усталость глаз при долгой работе за графикой и играми. Кронштейн освободит место на столе и позволит настроить оптимальную высоту. Уборка — бесплатный способ улучшить эстетику и психологический комфорт. Вентилятор или освежитель воздуха — необязательная, но приятная опция для лета.</div>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>5. Визуальные материалы</h2>
-      <p class="lead">Здесь можно вставить реальные фотографии, схему, референсы или оставить место под изображения перед сдачей.</p>
-      <div class="gallery">
-        <div class="ph"><img src="images/volkova_kimnata1.jpg" alt="Фото рабочего места 1"></div>
-        <div class="ph"><img src="images/volkova_kimnata2.jpg" alt="Фото рабочего места 2"></div>
-      </div>
-    </section>
+  <section class="section">
+    <h2>5. Визуальные материалы</h2>
+    <p class="lead">Реальные фотографии текущего состояния рабочего места.</p>
+    <div class="gallery">
+      <div class="ph"><img src="images/volkova_kimnata1.jpg" alt="Фото рабочего места 1"></div>
+      <div class="ph"><img src="images/volkova_kimnata2.jpg" alt="Фото рабочего места 2"></div>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>6. Итоговый вывод</h2>
-      <textarea id="finalConclusion" placeholder="Сформулируйте короткий вывод: насколько рабочее пространство соответствует задачам, какие у него главные достоинства, какие ограничения и какие улучшения являются наиболее рациональными.">Рабочее место в целом соответствует задачам: два экрана (один из них графический планшет) и принтер покрывают потребности в учёбе, играх и диджитал-рисовании. Кресло удобное. Однако беспорядок с проводами, пищащий монитор и пыльный системник снижают комфорт и надёжность. Наиболее рациональные улучшения — подставка для системника (почти бесплатно) и замена монитора на матовый с кронштейном (бюджетно, но с долгосрочным эффектом). Уборка — быстрый способ поднять настроение и внешний вид.</textarea>
-      <div class="note" style="margin-top:14px;"><strong>Совет:</strong> хороший вывод должен соединять наблюдения, баллы, смысловые выводы и реальные предложения по улучшению.</div>
-    </section>
+  <section class="section">
+    <h2>6. Итоговый вывод</h2>
+    <div class="report-text">Рабочее место в целом соответствует задачам: два экрана (один из них графический планшет) и принтер покрывают потребности в учёбе, играх и диджитал-рисовании. Кресло удобное. Однако беспорядок с проводами, пищащий монитор и пыльный системник снижают комфорт и надёжность. Наиболее рациональные улучшения — подставка для системника (почти бесплатно) и замена монитора на матовый с кронштейном (бюджетно, но с долгосрочным эффектом). Уборка — быстрый способ поднять настроение и внешний вид.</div>
+    <div class="note" style="margin-top:14px;"><strong>Совет:</strong> хороший вывод должен соединять наблюдения, баллы, смысловые выводы и реальные предложения по улучшению.</div>
+  </section>
 
-    <div class="footer">Перед сдачей проверьте, что текст ясен, структура логична, а выводы подтверждаются наблюдениями.</div>
-  </div>
-
-<script>
-function loadChecklistData(){
-  let raw = localStorage.getItem('workspaceChecklistData');
-  if(!raw){
-    const defaultData = {
-      sum: '82',
-      max: '92',
-      percent: '89%',
-      interpretation: 'Рабочее место организовано грамотно и соответствует задачам',
-      strengths: '',
-      problems: '',
-      improvements: ''
-    };
-    localStorage.setItem('workspaceChecklistData', JSON.stringify(defaultData));
-    raw = localStorage.getItem('workspaceChecklistData');
-  }
-  try{
-    const data = JSON.parse(raw);
-    document.getElementById('sum').textContent = data.sum || '—';
-    document.getElementById('max').textContent = data.max || '—';
-    document.getElementById('percent').textContent = data.percent || '—';
-    document.getElementById('interp').textContent = data.interpretation || '—';
-    if(!document.getElementById('strengths').value) document.getElementById('strengths').value = data.strengths || '';
-    if(!document.getElementById('problems').value) document.getElementById('problems').value = data.problems || '';
-    if(!document.getElementById('improvements').value) document.getElementById('improvements').value = data.improvements || '';
-  } catch(e){}
-}
-function saveReport(){
-  const ids = ['studentName','objectName','purpose','strengths','problems','improvements','noBudget','withBudget','justification','finalConclusion'];
-  const payload = {};
-  ids.forEach(id => payload[id] = document.getElementById(id).value);
-  localStorage.setItem('workspaceReportDraft', JSON.stringify(payload));
-}
-function loadReport(){
-  const raw = localStorage.getItem('workspaceReportDraft');
-  if(!raw) return;
-  try{
-    const data = JSON.parse(raw);
-    Object.entries(data).forEach(([k,v]) => {
-      const el = document.getElementById(k);
-      if(el && !el.value) el.value = v || '';
-    });
-  } catch(e){}
-}
-document.querySelectorAll('textarea, input[type="text"]').forEach(el => el.addEventListener('input', saveReport));
-loadChecklistData();
-loadReport();
-</script>
+  <div class="footer">Отчёт подготовлен на основе реального аудита рабочего пространства. Данные чек-листа — 82 балла из 92 (89%).</div>
+</div>
 </body>
 </html>

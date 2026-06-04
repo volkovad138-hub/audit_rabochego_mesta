@@ -161,14 +161,14 @@
       <div class="form-grid">
         <div>
           <label class="caption" for="projectTitle">Название проекта</label>
-          <input class="field" id="projectTitle" type="text" placeholder="Например: модернизация аудитории 304 для проектной работы" />
+          <input class="field" id="projectTitle" type="text" value="Модернизация аудитории 6242" />
         </div>
         <div>
           <label class="caption" for="objectType">Тип объекта</label>
           <select id="objectType">
             <option value="">Выберите тип</option>
             <option>Учебная аудитория</option>
-            <option>Компьютерный класс</option>
+            <option selected>Компьютерный класс</option>
             <option>Рабочее место преподавателя</option>
             <option>Зона отдыха студентов</option>
             <option>Серверный узел / сетевая зона</option>
@@ -178,19 +178,19 @@
         </div>
         <div>
           <label class="caption" for="roomNumber">Номер аудитории / название организации</label>
-          <input class="field" id="roomNumber" type="text" placeholder="Например: корпус Б, аудитория 218" />
+          <input class="field" id="roomNumber" type="text" value="Корпус 6, аудитория 6242" />
         </div>
         <div>
           <label class="caption" for="audience">Целевая аудитория</label>
-          <input class="field" id="audience" type="text" placeholder="Например: студенты 1 курса, преподаватели, сотрудники деканата" />
+          <input class="field" id="audience" type="text" value="Студенты и преподаватели" />
         </div>
         <div class="wide">
           <label class="caption" for="uniqueness">Почему выбранный объект не повторяет чужой проект</label>
-          <textarea id="uniqueness" class="small" placeholder="Укажите, какую именно зону вы исследуете, почему она важна и чем ваш проект отличается от проектов других команд."></textarea>
+          <textarea id="uniqueness" class="small">Аудитория 6242 представляет собой компьютерный класс, однако её основная проблема не сводится к типичному устареванию техники. Главная особенность – старые ноутбуки с непонятной для студентов и преподавателей системой</textarea>
         </div>
         <div class="wide">
           <label class="caption" for="projectGoal">Цель улучшения</label>
-          <textarea id="projectGoal" placeholder="Сформулируйте измеримую цель: что должно стать удобнее, безопаснее, производительнее или рациональнее после реализации проекта."></textarea>
+          <textarea id="projectGoal">Сделать аудиторию 6242 удобнее, производительнее и рациональнее за счёт достижения измеримых результатов: полностью заменить старые ноутбуки на новые стационарные компьютеры с предустановленной Windows (без системы «Гладзор») и сократить время входа в рабочую среду до менее чем 30 секунд;</textarea>
         </div>
       </div>
     </section>
@@ -236,16 +236,16 @@
       <div class="grid" style="margin-top:14px;">
         <div class="card">
           <h3>Решения без бюджета или с минимальными затратами</h3>
-          <textarea id="noBudgetPlan" class="small" placeholder="Перестановка мебели, кабельная организация, режим проветривания, настройка высоты монитора, расписание разминок, временная подставка для ног."></textarea>
+          <textarea id="noBudgetPlan" class="small">В аудитории 6242 можно реализовать несколько улучшений, которые не требуют значительных вложений. Например, перестановка мебели: сдвинуть парты, чтобы улучшить проходы и обеспечить доступ к розеткам</textarea>
         </div>
         <div class="card">
           <h3>Решения с закупкой</h3>
-          <textarea id="budgetPlan" class="small" placeholder="Новые мониторы, кресла, освещение, сетевое оборудование, накопители, ОЗУ, периферия, серверный шкаф, ИБП."></textarea>
+          <textarea id="budgetPlan" class="small">Для полноценной модернизации требуется закупка нового оборудования. Вместо старых ноутбуков приобретаются 30 системных блоков (Intel Core i5, 16 ГБ ОЗУ, SSD 512 ГБ, Windows 11 без «Гладзор») по 35 000 руб. за единицу, 30 мониторов 24", клавиатуры+мыши, новые столы и кресла, телевизор 75", кондиционер, шторы блэкаут, удлинители с USB, маркеры, часы, плакаты.</textarea>
         </div>
       </div>
       <div style="margin-top:14px;">
         <label class="caption" for="tco">Итоговая логика бюджета и стоимости владения</label>
-        <textarea id="tco" placeholder="Объясните стартовую стоимость, срок службы, обслуживание, расходники, модернизацию, риски простоя и почему закупка рациональна."></textarea>
+        <textarea id="tco">Стартовая стоимость модернизации составляет около 2 млн рублей — это разовая инвестиция в замену оборудования, которое эксплуатируется 5–7 лет (ноутбуки) и более 10 лет (парты). Закупаются не премиальные, а надёжные компоненты с оптимальным соотношением цены и качества для учебного процесса. Расходы на обслуживание минимальны (замена маркеров, чистка фильтров кондиционера). За счёт повышения эффективности занятий и сокращения простоев инвестиции окупаются за 2-3 года.</textarea>
       </div>
     </section>
 
@@ -254,19 +254,19 @@
       <div class="grid">
         <div class="card">
           <h3>Рабочие места</h3>
-          <textarea id="workplaceErgo" class="small" placeholder="Стол, кресло, высота монитора, расстояние до экрана, освещение, шум, кабели, доступ к розеткам, безопасные проходы."></textarea>
+          <textarea id="workplaceErgo" class="small">Каждое рабочее место оборудовано отдельным компьютерным столом шириной 80–100 см и глубиной 60 см, что обеспечивает достаточное пространство для монитора, клавиатуры, мыши и тетрадей. Столы не имеют выступающих элементов, регулируются по высоте. Мониторы с матовым покрытием, антибликовые. Кресла с регулировкой высоты и подлокотниками.</textarea>
         </div>
         <div class="card">
           <h3>Зоны отдыха и восстановления</h3>
-          <textarea id="restZone" class="small" placeholder="Где студент может сделать паузу, зарядить устройство, посидеть без перегруза, размяться, поработать коротко вне аудитории."></textarea>
+          <textarea id="restZone" class="small">Хотя аудитория 6242 является компьютерным классом, для снижения утомляемости предусмотрены небольшие зоны восстановления. В углу у окна после замены штор и установки дополнительного кондиционера планируется поставить два мягких кресла и журнальный столик. Также доступна зона с кулером и возможностью зарядить мобильные устройства.</textarea>
         </div>
         <div class="card">
           <h3>Сеть и серверный узел</h3>
-          <textarea id="serverNode" class="small" placeholder="Сетевые розетки, Wi-Fi, коммутатор, шкаф, вентиляция, ИБП, маркировка кабелей, доступ только ответственным лицам."></textarea>
+          <textarea id="serverNode" class="small">В аудитории уже имеется телекоммуникационный шкаф (на фото отмечен как одна из немногих хороших вещей). Он находится в задней части класса, закрывается на ключ, доступ к нему имеют только ответственные лица. В шкафу установлен коммутатор на 48 портов, ИБП, патч-панель. Все кабели промаркированы, организован воздухообмен.</textarea>
         </div>
         <div class="card">
           <h3>Безопасность и доступность</h3>
-          <textarea id="safetyAccess" class="small" placeholder="Электробезопасность, проходы, пожарная безопасность, устойчивость мебели, доступность для разных пользователей."></textarea>
+          <textarea id="safetyAccess" class="small">Электробезопасность обеспечена использованием сертифицированных сетевых фильтров с заземлением, все розетки и удлинители закреплены, чтобы избежать случайного контакта с водой (в аудитории нет источников воды). Проходы между рядами не менее 90 см, что соответствует пожарным нормам. Мебель устойчива, кресла на колёсиках с блокировкой.</textarea>
         </div>
       </div>
     </section>
@@ -327,11 +327,11 @@
       <div class="grid">
         <div class="card">
           <h3>Общий вывод по проекту</h3>
-          <textarea id="finalProjectConclusion" placeholder="Сформулируйте, какие изменения дадут наибольший эффект, какие ограничения остаются и почему проект можно считать реалистичным."></textarea>
+          <textarea id="finalProjectConclusion">Наибольший эффект даст комплексная замена трёх ключевых элементов: старых ноутбуков на современные стационарные компьютеры (устранение проблем с системой «Гладзор», медленной загрузкой и глянцевыми экранами), неудобных парт и лавок на эргономичные столы и кресла, а также улучшение климата (второй кондиционер, шторы блэкаут). Ограничения — бюджет и необходимость согласования закупок с администрацией. Проект реалистичен, так как почти все предложенные решения уже успешно применяются в других аудиториях вуза.</textarea>
         </div>
         <div class="card">
           <h3>План внедрения по этапам</h3>
-          <textarea id="implementationPlan" placeholder="Разбейте реализацию на этапы: быстрые действия, закупка, монтаж/перестановка, проверка результата, обслуживание."></textarea>
+          <textarea id="implementationPlan">Быстрые действия (1–3 дня, без бюджета или минимально) – очистка аудитории от лишних предметов, перестановка существующей мебели для улучшения проходов, организация кабелей временными стяжками, чистовая переустановка Windows на старых ноутбуках (без «Гладзор») как временное решение. Первый этап закупки (1 месяц) – приобретение и установка 30 системных блоков, мониторов, клавиатур, мышей, а также телевизора и удлинителей. Второй этап (2-3 месяца) – замена мебели (столы, кресла), установка второго кондиционера, штор, часов и плакатов. Третий этап – обучение преподавателей и студентов работе в новой среде, приёмка результатов.</textarea>
         </div>
       </div>
       <div class="note" style="margin-top:14px;"><strong>Хорошая защита проекта</strong> соединяет реальные наблюдения, фотографии, смету, ограничения помещения, потребности пользователей и понятный эффект от внедрения.</div>
@@ -415,17 +415,61 @@ const checklistGroups = [
 ];
 
 let state = {
-  team:[{name:'', duties:'', role:'', conclusion:''}],
-  equipment:[{name:'', specs:'', qty:'', price:'', reason:'', priority:'Рекомендуемая'}],
-  photos:[{path:'', caption:'', finding:''},{path:'', caption:'', finding:''},{path:'', caption:'', finding:''}],
-  visuals:[
+  team: [
+    {
+      name: 'Веркеева Вероника Николаевна',
+      role: 'Смета, аудит, HTML, фото',
+      duties: 'Выявление проблем, описание проблем',
+      conclusion: 'Узкие парты, нелогичная навигация в ОС сильно снижают эффективность занятий. Составление сметы показало, что замена ноутбуков на стационарные ПК не обязательно дороже, но даёт выигрыш в надёжности и эффективности.'
+    },
+    {
+      name: 'Волкова Дарья Константиновна',
+      role: 'Дизайн, аудит, HTML',
+      duties: 'Решение проблем, генерация фотографий',
+      conclusion: 'Красивая расстановка, а точный расчёт свободного пространства для каждого студента и преподавателя. Замена ноутбуков на стационарные ПК позволила убрать хаос проводов и освободить место на столах.'
+    }
+  ],
+  equipment: [
+    {name:'Системный блок', specs:'Intel Core i5 (12-gen), 16ГБ ОЗУ, SSD 512ГБ', qty:'30', price:'35 000 руб.', reason:'Замена старых ноутбуков (фото 15, 16), которые медленно работают даже после переустановки ОС, а система «Гладзор» затрудняет вход в Windows. Новые ПК обеспечат быстрый запуск, совместимость с учебным ПО.', priority:'Обязательная'},
+    {name:'Монитор', specs:'1920×1080, IPS, матовый, 24"', qty:'30', price:'12 000 руб.', reason:'Старые ноутбуки имеют глянцевые экраны, от которых устают глаза (фото 15). Матовые мониторы снижают блики от солнечного света (проблема с шторами и окнами – фото 11). Размер 24” позволяет разместить несколько окон.', priority:'Обязательная'},
+    {name:'Проводная клавиатура (тихая) + мышь', specs:'USB, низкий профиль, 3 кнопки мыши', qty:'30 комплектов', price:'1 500 руб.', reason:'Ноутбуки имеют встроенные клавиатуры, но при замене на стационарные ПК нужны полноразмерные устройства. Дешевле и надёжнее беспроводных, не требует батареек. Тихие клавиши не мешают соседям.', priority:'Обязательная'},
+    {name:'Одноместный компьютерный стол', specs:'80–100 см ширина, 60 см глубина, регулируемая высота', qty:'30', price:'6 000 руб.', reason:'Старые парты неудобные, с доской под столешницей, которая мешает сидеть (фото 1), мало места, неэстетичны (фото 2). Новые столы дадут каждому студенту отдельное рабочее пространство, увеличат полезную площадь.', priority:'Рекомендуемая'},
+    {name:'Офисное кресло', specs:'Регулировка высоты, мягкое сиденье, колёсики', qty:'30', price:'7 000 руб.', reason:'Повсеместно в аудитории стоят жёсткие лавки (фото 6, 8), неудобные для долгих занятий. Кресла с регулировкой улучшат эргономику, снизят усталость и поддерживают правильную осанку.', priority:'Желательная'},
+    {name:'Удлинители с розетками и USB', specs:'5 м, 4 розетки, 2 USB', qty:'15', price:'1 200 руб.', reason:'В аудитории мало розеток – одна под столом (фото 4), розетки у стен требуют отодвигать скамейку (фото 5). Нет возможности зарядить телефон. Удлинители с USB решат проблему питания ПК и зарядки мобильных устройств.', priority:'Желательная'},
+    {name:'Телевизор LED 75"', specs:'4K UHD, HDR, яркость >400 нит, матовое покрытие', qty:'1', price:'85 000 руб.', reason:'Проектор летом плохо виден из-за солнечного света (фото 9, 11), кондиционер не охлаждает преподавателя. Телевизор даёт яркое, контрастное изображение, не требует затемнения полностью, виден всем.', priority:'Рекомендуемая'},
+    {name:'Рулонные шторы блэкаут', specs:'Плотная ткань, размер по окнам', qty:'2', price:'15 000 руб.', reason:'Текущие шторы плохо закрываются (фото 11), солнце светит на студентов и ухудшает видимость презентации. Блэкаут-шторы позволяют регулировать освещение, защитят от бликов на мониторах и телевизоре.', priority:'Желательная'},
+    {name:'Настенная сплит-система', specs:'3,5 кВт, инверторный', qty:'1', price:'45 000 руб.', reason:'Существующий кондиционер стоит с одной стороны и не попадает на преподавателя и половину студентов (фото 3). Второй кондиционер с противоположной стороны обеспечит равномерное охлаждение всей аудитории.', priority:'Желательная'},
+    {name:'Маркеры для белой доски', specs:'4 цвета + чёрный, нетоксичные', qty:'1 набор', price:'500 руб.', reason:'В аудитории отсутствуют маркеры для доски (указано в начальных жалобах). Это необходимо для интерактивной работы преподавателя. Бюджетное решение, но критически важное.', priority:'Рекомендуемая'},
+    {name:'Настенные электронные часы', specs:'Цифровые, питание 220В', qty:'1', price:'2 500 руб.', reason:'Старые часы на стене не работают (фото 14), требуют замены батарейки. Электронные часы не нужно обслуживать, они хорошо видны при любом освещении и помогают соблюдать тайминг занятий.', priority:'Желательная'},
+    {name:'Учебные плакаты', specs:'А1, цветные, ламинированные, 10 шт.', qty:'10', price:'700 руб.', reason:'Текущие плакаты «скучные, не цветные, не дают мотивации и портят вид» (фото 10). Новые плакаты оживят интерьер, будут служить справочным материалом и повышать интерес к предмету.', priority:'Желательная'}
+  ],
+  photos: [
+    {path:'images/aygitoria_celikom.jpg', caption:'Фото под партой', finding:'Доска под партой мешает нормально сидеть, никто ей не пользуется.'},
+    {path:'images/chasy.jpg', caption:'Фото парт', finding:'Парты довольно старые, что выглядит достаточно неэстетично и портит вид.'},
+    {path:'images/glazdor.jpg', caption:'Фото кондиционера', finding:'Кондиционер стоит с одной стороны, не попадая на преподавателя и половину студентов.'},
+    {path:'images/kondicioner.jpg', caption:'Розетка под столом', finding:'Есть только одна, нельзя зарядить телефон или другие устройства.'},
+    {path:'images/prez_holst.jpg', caption:'Розетки у парт рядом со стенами', finding:'Такие розетки есть только у парт, которые находятся у стен. Для того чтобы вставить еще зарядный блок нужно дополнительно отодвинуть скамейку.'},
+    {path:'images/noyt.jpg', caption:'Рабочее место преподавателя', finding:'Рабочее место выглядит неплохо, есть современный и быстрый компьютер, но лавка неудобна для долгого сидения, лучше поставить кресло.'},
+    {path:'images/noyti_na_parte.jpg', caption:'Парты с ноутбуками', finding:'На фото видно, что на одну большую парту приходится всего один ноутбук.'},
+    {path:'images/okna.jpg', caption:'фото парт и всей аудитории', finding:'Везде стоят лавки, что неудобно для долгого сидения, лучше сделать либо стулья с мягкой обивкой, либо кресла.'},
+    {path:'images/party.jpg', caption:'Доска', finding:'Вместо экрана для проектора лучше поставить большой телевизор, тк летом в солнечную погоду чаще всего плохо видно презентацию.'},
+    {path:'images/photo1.jpg', caption:'Плакаты на стене', finding:'Плакаты скучные, не цветные, не дают мотивации и портят вид, выглядит пусто.'},
+    {path:'images/plakaty.jpg', caption:'Шторы и окна', finding:'Шторы нормально не закрываются, солнце светит на студентов и дополнительно ухудшает видимость презентации.'},
+    {path:'images/korobka_hz.jpg', caption:'Шкаф телекоммуникационный', finding:'Одна из немногих хороших вещей в аудитории.'},
+    {path:'images/proektor_snizu.jpg', caption:'Проектор', finding:'Неплохой, но лучше сделать телевизор.'},
+    {path:'images/proektor.jpg', caption:'Часы на стене', finding:'Скучные часы, которые не работают, дополнительно нужно менять батарейку. Лучше сделать электронные часы, которые будут работать от сети.'},
+    {path:'images/rozetka+po_seredine.jpg', caption:'Ноутбук', finding:'Старый ноутбук, который даже при переустановке ОС работает медленно. От глянцевого экрана устают глаза.'},
+    {path:'images/rozetky.jpg', caption:'Система в ноутбуке', finding:'Переустановка ОС не только не ускорила работу ноутбука, но и затруднила и замедлила вход в систему, тк многие студенты и преподаватели не знают как туда войти.'},
+    {path:'images/stol_prepoda.jpg', caption:'Проектор вид снизу', finding:'Проект фирмы EPSON.'}
+  ],
+  visuals: [
     {path:'', prompt:'', purpose:'', criteria:''},
     {path:'', prompt:'', purpose:'', criteria:''},
     {path:'', prompt:'', purpose:'', criteria:''},
     {path:'', prompt:'', purpose:'', criteria:''},
     {path:'', prompt:'', purpose:'', criteria:''}
   ],
-  checklist:{}
+  checklist: Object.fromEntries(Array.from({length: 28}, (_, i) => [`check_${i}`, true]))
 };
 
 function byId(id){
@@ -438,21 +482,16 @@ function escapeHtml(value){
   }[char]));
 }
 
-function updateDynamicLabels(){
-  document.querySelectorAll('[data-dynamic-number]').forEach((el, index) => {
-    el.textContent = el.dataset.dynamicNumber + ' ' + (index + 1);
-  });
-}
-
 function renderTeam(){
   const list = byId('teamList');
+  if (!list) return;
   list.innerHTML = '';
   state.team.forEach((member, index) => {
     const row = document.createElement('div');
     row.className = 'dynamic-row';
     row.innerHTML = `
       <div class="row-head">
-        <div class="row-title" data-dynamic-number="Участник">Участник ${index + 1}</div>
+        <div class="row-title">Участник ${index + 1}</div>
         <button class="btn danger remove-btn" type="button" data-remove-team="${index}">Удалить</button>
       </div>
       <div class="mini-grid">
@@ -464,11 +503,13 @@ function renderTeam(){
     `;
     list.appendChild(row);
   });
-  byId('addMemberBtn').disabled = state.team.length >= 3;
+  const addBtn = byId('addMemberBtn');
+  if (addBtn) addBtn.disabled = state.team.length >= 3;
 }
 
 function renderEquipment(){
   const list = byId('equipmentList');
+  if (!list) return;
   list.innerHTML = '';
   state.equipment.forEach((item, index) => {
     const row = document.createElement('div');
@@ -499,6 +540,7 @@ function renderEquipment(){
 
 function renderPhotos(){
   const list = byId('photoList');
+  if (!list) return;
   list.innerHTML = '';
   state.photos.forEach((photo, index) => {
     const card = document.createElement('div');
@@ -508,7 +550,7 @@ function renderPhotos(){
         <h3>Фото текущего состояния ${index + 1}</h3>
         <button class="btn danger remove-btn" type="button" data-remove-photo="${index}">Удалить</button>
       </div>
-      <div class="media-preview" data-photo-preview="${index}">Предпросмотр фотографии</div>
+      <div class="media-preview" id="photo-preview-${index}">Предпросмотр фотографии</div>
       <input class="file-input" type="file" accept="image/*" data-photo-file="${index}" />
       <label class="caption" style="margin-top:10px;">Путь к файлу для публикации</label>
       <input class="field" data-photo="${index}" data-field="path" type="text" value="${escapeHtml(photo.path)}" placeholder="images/auditory-before-1.jpg" />
@@ -518,11 +560,21 @@ function renderPhotos(){
       <textarea class="small" data-photo="${index}" data-field="finding" placeholder="Какая проблема или особенность подтверждается этим фото.">${escapeHtml(photo.finding)}</textarea>
     `;
     list.appendChild(card);
+    // отображаем картинку, если путь задан
+    const previewDiv = document.getElementById(`photo-preview-${index}`);
+    if (photo.path && photo.path.trim() !== '') {
+      const img = document.createElement('img');
+      img.src = photo.path;
+      img.onerror = () => { previewDiv.innerHTML = '❌ Файл не найден: ' + photo.path; };
+      previewDiv.innerHTML = '';
+      previewDiv.appendChild(img);
+    }
   });
 }
 
 function renderVisuals(){
   const list = byId('visualList');
+  if (!list) return;
   list.innerHTML = '';
   state.visuals.forEach((visual, index) => {
     const card = document.createElement('div');
@@ -549,6 +601,7 @@ function renderVisuals(){
 
 function renderChecklist(){
   const box = byId('qualityChecklist');
+  if (!box) return;
   box.innerHTML = '';
   let absoluteIndex = 0;
   checklistGroups.forEach(group => {
@@ -572,30 +625,30 @@ function updateChecklistSummary(){
   const total = all.length;
   const done = checked.length;
   const percent = total ? Math.round(done / total * 100) : 0;
-  byId('doneCount').textContent = done;
-  byId('totalCount').textContent = total;
-  byId('readyPercent').textContent = percent + '%';
-  byId('scoreFill').style.width = percent + '%';
+  if (byId('doneCount')) byId('doneCount').textContent = done;
+  if (byId('totalCount')) byId('totalCount').textContent = total;
+  if (byId('readyPercent')) byId('readyPercent').textContent = percent + '%';
+  if (byId('scoreFill')) byId('scoreFill').style.width = percent + '%';
   let status = 'Начните заполнение';
   if(percent >= 90) status = 'Готово к защите';
   else if(percent >= 70) status = 'Почти готово';
   else if(percent >= 45) status = 'Нужна доработка';
   else if(percent > 0) status = 'Соберите доказательства';
-  byId('readyStatus').textContent = status;
+  if (byId('readyStatus')) byId('readyStatus').textContent = status;
 }
 
 function captureState(){
   document.querySelectorAll('[data-team]').forEach(el => {
-    state.team[Number(el.dataset.team)][el.dataset.field] = el.value;
+    if (state.team[Number(el.dataset.team)]) state.team[Number(el.dataset.team)][el.dataset.field] = el.value;
   });
   document.querySelectorAll('[data-equipment]').forEach(el => {
-    state.equipment[Number(el.dataset.equipment)][el.dataset.field] = el.value;
+    if (state.equipment[Number(el.dataset.equipment)]) state.equipment[Number(el.dataset.equipment)][el.dataset.field] = el.value;
   });
   document.querySelectorAll('[data-photo]').forEach(el => {
-    state.photos[Number(el.dataset.photo)][el.dataset.field] = el.value;
+    if (state.photos[Number(el.dataset.photo)]) state.photos[Number(el.dataset.photo)][el.dataset.field] = el.value;
   });
   document.querySelectorAll('[data-visual]').forEach(el => {
-    state.visuals[Number(el.dataset.visual)][el.dataset.field] = el.value;
+    if (state.visuals[Number(el.dataset.visual)]) state.visuals[Number(el.dataset.visual)][el.dataset.field] = el.value;
   });
   document.querySelectorAll('[data-check]').forEach(el => {
     state.checklist[el.dataset.check] = el.checked;
@@ -610,7 +663,7 @@ function saveDraft(){
     'safetyAccess','finalProjectConclusion','implementationPlan'
   ];
   const fields = {};
-  ids.forEach(id => fields[id] = byId(id).value);
+  ids.forEach(id => { const el = byId(id); if (el) fields[id] = el.value; });
   localStorage.setItem(storageKey, JSON.stringify({...fields, dynamic:state}));
 }
 
@@ -622,14 +675,17 @@ function loadDraft(){
     Object.entries(saved).forEach(([key, value]) => {
       if(key === 'dynamic') return;
       const el = byId(key);
-      if(el) el.value = value || '';
+      if(el && value !== undefined) el.value = value;
     });
     if(saved.dynamic){
       state = {
         ...state,
         ...saved.dynamic,
+        team: saved.dynamic.team && saved.dynamic.team.length ? saved.dynamic.team : state.team,
+        equipment: saved.dynamic.equipment && saved.dynamic.equipment.length ? saved.dynamic.equipment : state.equipment,
         photos: saved.dynamic.photos && saved.dynamic.photos.length ? saved.dynamic.photos : state.photos,
-        visuals: saved.dynamic.visuals && saved.dynamic.visuals.length >= 5 ? saved.dynamic.visuals : state.visuals
+        visuals: saved.dynamic.visuals && saved.dynamic.visuals.length ? saved.dynamic.visuals : state.visuals,
+        checklist: saved.dynamic.checklist ? {...state.checklist, ...saved.dynamic.checklist} : state.checklist
       };
     }
   } catch(e){}
@@ -705,54 +761,65 @@ document.addEventListener('click', event => {
   }
 });
 
-byId('addMemberBtn').addEventListener('click', () => {
-  captureState();
-  if(state.team.length < 3){
-    state.team.push({name:'', duties:'', role:'', conclusion:''});
-    renderTeam();
+const addMemberBtn = byId('addMemberBtn');
+if(addMemberBtn){
+  addMemberBtn.addEventListener('click', () => {
+    captureState();
+    if(state.team.length < 3){
+      state.team.push({name:'', duties:'', role:'', conclusion:''});
+      renderTeam();
+      saveDraft();
+    } else {
+      alert('Команда может включать не более 3 человек.');
+    }
+  });
+}
+
+const addEquipmentBtn = byId('addEquipmentBtn');
+if(addEquipmentBtn){
+  addEquipmentBtn.addEventListener('click', () => {
+    captureState();
+    state.equipment.push({name:'', specs:'', qty:'', price:'', reason:'', priority:'Рекомендуемая'});
+    renderEquipment();
     saveDraft();
-  } else {
-    alert('Команда может включать не более 3 человек.');
-  }
-});
+  });
+}
 
-byId('addEquipmentBtn').addEventListener('click', () => {
-  captureState();
-  state.equipment.push({name:'', specs:'', qty:'', price:'', reason:'', priority:'Рекомендуемая'});
-  renderEquipment();
-  saveDraft();
-});
+const addPhotoBtn = byId('addPhotoBtn');
+if(addPhotoBtn){
+  addPhotoBtn.addEventListener('click', () => {
+    captureState();
+    state.photos.push({path:'', caption:'', finding:''});
+    renderPhotos();
+    saveDraft();
+  });
+}
 
-byId('addPhotoBtn').addEventListener('click', () => {
-  captureState();
-  state.photos.push({path:'', caption:'', finding:''});
-  renderPhotos();
-  saveDraft();
-});
+const addVisualBtn = byId('addVisualBtn');
+if(addVisualBtn){
+  addVisualBtn.addEventListener('click', () => {
+    captureState();
+    state.visuals.push({path:'', prompt:'', purpose:'', criteria:''});
+    renderVisuals();
+    saveDraft();
+  });
+}
 
-byId('addVisualBtn').addEventListener('click', () => {
-  captureState();
-  state.visuals.push({path:'', prompt:'', purpose:'', criteria:''});
-  renderVisuals();
-  saveDraft();
-});
+const saveBtn = byId('saveBtn');
+if(saveBtn) saveBtn.addEventListener('click', () => { saveDraft(); alert('Черновик сохранён в браузере.'); });
 
-byId('saveBtn').addEventListener('click', () => {
-  saveDraft();
-  alert('Черновик сохранён в браузере.');
-});
+const printBtn = byId('printBtn');
+if(printBtn) printBtn.addEventListener('click', () => { saveDraft(); window.print(); });
 
-byId('printBtn').addEventListener('click', () => {
-  saveDraft();
-  window.print();
-});
-
-byId('clearBtn').addEventListener('click', () => {
-  if(confirm('Очистить сохранённый черновик этой страницы?')){
-    localStorage.removeItem(storageKey);
-    location.reload();
-  }
-});
+const clearBtn = byId('clearBtn');
+if(clearBtn){
+  clearBtn.addEventListener('click', () => {
+    if(confirm('Очистить сохранённый черновик этой страницы?')){
+      localStorage.removeItem(storageKey);
+      location.reload();
+    }
+  });
+}
 
 loadDraft();
 renderTeam();

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Практическая работа: учебная экосистема</title>
+  <title>Цифровой отчёт по рабочему пространству</title>
   <style>
     :root{
       --bg:#f4f7fc; --card:#ffffff; --text:#18212f; --muted:#5f6b7a; --line:#dde6f0;
@@ -65,15 +65,6 @@
     .btn.primary{background:linear-gradient(135deg,#2457d6 0%, #4f86ff 100%); color:#fff; box-shadow:0 10px 24px rgba(36,87,214,.20);}
     .btn.secondary{background:#fff; color:var(--primary); border-color:#cfddfb;}
     .btn:hover{transform:translateY(-1px);}
-    .steps{display:grid; gap:12px;}
-    .step{
-      display:grid; grid-template-columns:52px 1fr; gap:14px; align-items:flex-start;
-      border:1px solid var(--line); border-radius:18px; padding:14px;
-    }
-    .num{
-      width:52px; height:52px; border-radius:16px; background:var(--soft); color:var(--primary);
-      display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:800;
-    }
     .note{
       border-radius:18px; padding:16px 18px; border:1px solid #d6ebdf; background:#f1fcf6;
     }
@@ -85,84 +76,35 @@
 <body>
   <div class="wrap">
     <section class="hero">
-      <div class="eyebrow">Практическая работа</div>
+      <div class="eyebrow">Цифровой отчёт</div>
       <h1>Аудит рабочего пространства и проект его улучшения</h1>
-      <p>Перед вами учебная мини-система, которая поможет пройти путь от анализа рабочего места до оформления собственного цифрового отчёта. Работайте последовательно: сначала изучите задание, затем заполните чек-лист, после этого подготовьте отчёт в шаблоне.</p>
-    </section>
-
-    <section class="section">
-      <h2>Маршрут работы</h2>
-      <div class="steps">
-        <div class="step"><div class="num">1</div><div><h3>Откройте инструкцию</h3><p class="lead">Посмотрите, как редактировать HTML-файлы, какие редакторы использовать и как безопасно применять ИИ как помощника.</p></div></div>
-        <div class="step"><div class="num">2</div><div><h3>Пройдите интерактивный чек-лист</h3><p class="lead">Оцените рабочее место по шкале 0–1–2, получите итоговый балл и зафиксируйте сильные стороны, проблемы и улучшения.</p></div></div>
-        <div class="step"><div class="num">3</div><div><h3>Соберите отчёт</h3><p class="lead">Откройте шаблон отчёта, перенесите результаты анализа, добавьте визуальные материалы и оформите итоговую работу.</p></div></div>
-        <div class="step"><div class="num">4</div><div><h3>Подготовьте проект улучшения пространства</h3><p class="lead">Выберите аудиторию, рабочую зону или организацию, спроектируйте закупку оборудования, эргономику, зону отдыха и элементы ИТ-инфраструктуры.</p></div></div>
-      </div>
+      <p>Готовые отчёты и проектные решения по модернизации аудитории 6242, а также индивидуальные отчёты участников команды по своим рабочим местам.</p>
     </section>
 
     <section class="section">
       <h2>Основные страницы</h2>
-      <p class="lead">Все страницы связаны между собой и оформлены в едином стиле.</p>
+      <p class="lead">Две ключевые страницы проекта: комплексный план закупок и организации пространства, а также персональные отчёты студентов.</p>
       <div class="grid">
         <div class="card">
-          <span class="pill">Инструкция</span>
-          <h3>Как работать с HTML и ИИ</h3>
-          <p>Пошаговое объяснение для редактирования файлов, выбора текстового редактора, безопасной работы с кодом и использования промптов.</p>
-          <div class="btns">
-            <a class="btn primary" href="student_html_guide.html">Открыть инструкцию</a>
-          </div>
-        </div>
-        <div class="card">
-          <span class="pill">Чек-лист</span>
-          <h3>Интерактивная оценка рабочего места</h3>
-          <p>Автоматический подсчёт баллов, интерпретация результата, поля для сильных сторон, проблемных зон и предложений по улучшению.</p>
-          <div class="btns">
-            <a class="btn primary" href="student_checklist_interactive.html">Открыть чек-лист</a>
-          </div>
-        </div>
-        <div class="card">
-          <span class="pill">Шаблон</span>
-          <h3>HTML-шаблон отчёта</h3>
-          <p>Готовая структура для финальной работы: описание объекта анализа, результаты чек-листа, выводы, фото и проект улучшения.</p>
-          <div class="btns">
-            <a class="btn primary" href="student_report_template.html">Открыть шаблон отчёта</a>
-          </div>
-        </div>
-        <div class="card">
           <span class="pill">Проект</span>
-          <h3>Закупка оборудования и организация пространства</h3>
-          <p>Полное проектное задание: выбор аудитории или организации, команда, фотофиксация, смета, эргономика, серверный узел, зона отдыха и AI-визуализации.</p>
+          <h3>Закупка оборудования и организация пространства аудитории 6242</h3>
+          <p>Полное проектное задание: выбор аудитории, команда, фотофиксация, смета, эргономика, серверный узел, зона отдыха и AI-визуализации будущего пространства.</p>
           <div class="btns">
-            <a class="btn primary" href="student_infrastructure_project.html">Открыть проектное задание</a>
+            <a class="btn primary" href="student_infrastructure_project.html">Открыть проект</a>
           </div>
         </div>
         <div class="card">
-          <span class="pill">Задача</span>
-          <h3>Что должно получиться</h3>
-          <p>На выходе у вас будет осмысленный аудит рабочего пространства, собственная цифровая страница и проект улучшения, который можно защитить и опубликовать.</p>
+          <span class="pill">Отчёт</span>
+          <h3>Отчёт</h3>
+          <p>Индивидуальные отчёты участников команды по своим рабочим местам. В данном разделе представлены отдельные отчёты Волковой Дарьи Константиновны и Веркеевой Вероники Николаевны.</p>
           <div class="btns">
-            <a class="btn secondary" href="student_checklist_interactive.html#result">Перейти к итоговому блоку</a>
+            <a class="btn primary" href="student_report_template.html">Перейти к отчётам</a>
           </div>
         </div>
-      
-        <div class="card">
-          <span class="pill">Публикация</span>
-          <h3>Как создать репозиторий и выложить сайт</h3>
-          <p>Отдельная инструкция по GitHub Pages: как создать репозиторий, загрузить HTML-файлы и получить публичную ссылку на свой сайт бесплатно.</p>
-          <div class="btns">
-            <a class="btn primary" href="student_publish_site_guide.html">Открыть инструкцию по публикации</a>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <section class="section">
-      <h2>Что важно в этой работе</h2>
-      <div class="note"><strong>Ключевая идея:</strong> важно не просто перечислить недостатки рабочего места, а показать, как технические, эргономические и организационные решения влияют на удобство, эффективность и рациональность использования пространства.</div>
-    </section>
-
-    <div class="footer">Работайте последовательно: инструкция → чек-лист → отчёт → проект → публикация.</div>
+    <div class="footer">Проект по аудиту и модернизации рабочего пространства — 2026</div>
   </div>
 </body>
 </html>

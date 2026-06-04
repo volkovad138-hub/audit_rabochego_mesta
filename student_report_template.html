@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Шаблон отчёта студента</title>
+  <title>Выбор отчёта студента</title>
   <style>
     :root{
       --bg:#f4f7fc; --card:#ffffff; --text:#18212f; --muted:#5f6b7a; --line:#dde6f0;
@@ -11,42 +11,57 @@
       --shadow:0 14px 36px rgba(24,33,47,.10); --radius:22px;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#f7faff 0%, #f2f5fb 100%);line-height:1.58;}
-    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 56px;}
-    .hero{background:linear-gradient(135deg,#1f4ec9 0%, #3a76ff 100%);color:#fff;border-radius:28px;padding:28px 26px;box-shadow:var(--shadow);}
-    .eyebrow{display:inline-block;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18);font-size:13px;font-weight:700;letter-spacing:.02em;margin-bottom:14px;}
-    h1{margin:0;font-size:clamp(28px,4vw,42px);line-height:1.08;}
-    .hero p{margin:14px 0 0;max-width:860px;font-size:17px;opacity:.98;}
-    .nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
-    .btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;padding:11px 16px;border-radius:14px;font-weight:700;transition:.2s ease;border:1px solid transparent;cursor:pointer;}
-    .btn.primary{background:#fff;color:#1f4ec9;}
-    .btn.secondary{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.20);}
-    .section{margin-top:18px;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid #edf2f8;padding:24px 22px;}
-    .section h2{margin:0 0 10px;font-size:26px;line-height:1.15;}
-    .lead{margin:0 0 14px;color:var(--muted);font-size:16px;}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-    .card{border:1px solid var(--line);border-radius:18px;padding:16px;background:#fff;}
-    .card h3{margin:0 0 8px;font-size:19px;}
-    .field, textarea, input[type="text"]{
-      width:100%; border:1px solid var(--line); border-radius:14px; padding:12px 14px;
-      font:inherit; color:var(--text); background:#fff;
+    body{
+      margin:0; font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif; color:var(--text);
+      background:linear-gradient(180deg,#f7faff 0%, #f2f5fb 100%); line-height:1.58;
     }
-    textarea{min-height:120px; resize:vertical;}
-    .small{min-height:90px;}
-    .summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
-    .sum-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;}
-    .sum-card strong{display:block;font-size:14px;color:var(--muted);}
-    .big{font-size:34px;font-weight:800;color:var(--primary);line-height:1;margin-top:8px;}
-    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-    .ph{
-      border:2px dashed #cfdcf0; border-radius:18px; min-height:220px; display:flex;
-      align-items:center; justify-content:center; color:var(--muted); text-align:center; padding:20px;
-      background:#fbfcfe;
+    .wrap{max-width:1100px; margin:0 auto; padding:28px 18px 56px;}
+    .hero{
+      background:linear-gradient(135deg,#1f4ec9 0%, #3a76ff 100%);
+      color:#fff; border-radius:28px; padding:28px 26px; box-shadow:var(--shadow);
     }
-    .note{border-radius:18px;padding:16px 18px;border:1px solid #d6ebdf;background:#f1fcf6;}
-    .note strong{color:var(--green);}
-    .footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px;}
-    @media (max-width:900px){.grid,.summary,.gallery{grid-template-columns:1fr;}}
+    .eyebrow{
+      display:inline-block; padding:7px 12px; border-radius:999px;
+      background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.18);
+      font-size:13px; font-weight:700; letter-spacing:.02em; margin-bottom:14px;
+    }
+    h1{margin:0; font-size:clamp(28px,4vw,42px); line-height:1.08;}
+    .hero p{margin:14px 0 0; max-width:860px; font-size:17px; opacity:.98;}
+    .nav{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;}
+    .btn{
+      text-decoration:none; display:inline-flex; align-items:center; justify-content:center;
+      padding:11px 16px; border-radius:14px; font-weight:700; transition:.2s ease;
+      border:1px solid transparent; cursor:pointer; background:#fff; color:#1f4ec9;
+    }
+    .btn.secondary{background:rgba(255,255,255,.12); color:#fff; border-color:rgba(255,255,255,.20);}
+    .btn.primary{background:#fff; color:#1f4ec9;}
+    .section{
+      margin-top:18px; background:var(--card); border-radius:var(--radius);
+      box-shadow:var(--shadow); border:1px solid #edf2f8; padding:24px 22px;
+    }
+    h2{margin:0 0 10px; font-size:26px; line-height:1.15;}
+    .lead{margin:0 0 14px; color:var(--muted); font-size:16px;}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+    .card{
+      border:1px solid var(--line); border-radius:24px; padding:22px; background:#fff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover{transform:translateY(-4px); box-shadow:0 20px 28px -12px rgba(0,0,0,0.15);}
+    .card h3{margin:0 0 12px; font-size:24px; color:var(--primary);}
+    .card p{margin:8px 0 16px; color:var(--muted); line-height:1.5;}
+    .badge{
+      display:inline-block; background:#eef4ff; color:#2457d6; padding:6px 12px;
+      border-radius:999px; font-size:13px; font-weight:700; margin-bottom:14px;
+    }
+    .btn-card{
+      background:linear-gradient(135deg,#2457d6 0%, #4f86ff 100%);
+      color:#fff; border:none; padding:10px 20px; border-radius:40px;
+      font-weight:600; text-decoration:none; display:inline-block;
+      transition:0.2s; margin-top:8px;
+    }
+    .btn-card:hover{opacity:0.9; transform:scale(1.02);}
+    .footer{margin-top:18px; text-align:center; color:var(--muted); font-size:14px;}
+    @media (max-width:900px){.grid{grid-template-columns:1fr;}}
     @media print{
       body{background:#fff}
       .hero,.section{box-shadow:none}
@@ -55,147 +70,63 @@
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <section class="hero">
-      <div class="eyebrow">Шаблон отчёта</div>
-      <h1>Аудит рабочего пространства и проект улучшения</h1>
-      <p>Заполните поля ниже, перенесите результаты из чек-листа и оформите собственную итоговую страницу.</p>
-      <div class="nav">
-        <a class="btn primary" href="student_checklist_interactive.html">Вернуться к чек-листу</a>
-        <a class="btn secondary" href="student_html_guide.html">Инструкция по HTML и ИИ</a>
-        <a class="btn secondary" href="student_infrastructure_project.html">Проект оборудования</a>
-        <a class="btn secondary" href="student_publish_site_guide.html">Публикация сайта</a>
-        <button class="btn secondary" onclick="window.print()">Сохранить как PDF / печать</button>
-      </div>
-    </section>
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Шаблон отчёта</div>
+    <h1>Аудит рабочего пространства и проект улучшения</h1>
+    <p>Выберите отчёт студента, чтобы посмотреть детальное исследование, фотографии и предложения по модернизации.</p>
+    <div class="nav">
+      <a class="btn" href="student_checklist_interactive.html">Базовый чек-лист</a>
+      <a class="btn secondary" href="student_html_guide.html">Инструкция по HTML и ИИ</a>
+      <a class="btn secondary" href="student_infrastructure_project.html">Проект оборудования</a>
+      <a class="btn secondary" href="student_publish_site_guide.html">Публикация сайта</a>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>1. Общая информация</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>ФИО / автор</h3>
-          <input type="text" id="studentName" class="field" placeholder="Введите имя автора" value="Волкова Дарья Константиновна">
-        </div>
-        <div class="card">
-          <h3>Объект анализа</h3>
-          <input type="text" id="objectName" class="field" placeholder="Например: домашнее рабочее место, аудитория, офисный стол" value="Домашнее рабочее место" />
-        </div>
+  <section class="section">
+    <h2>📄 Отчёты участников проекта</h2>
+    <p class="lead">Каждый участник команды подготовил собственный отчёт с анализом, визуализациями и личными выводами.</p>
+    <div class="grid">
+      <!-- карточка Волковой -->
+      <div class="card">
+        <div class="badge">⭐ Индивидуальный отчёт</div>
+        <h3>Волкова Дарья Константиновна</h3>
+        <p>Роль: <strong>дизайн, аудит, HTML</strong></p>
+        <p>В отчёте представлены: анализ текущего состояния аудитории 6242, проблемные зоны (розетки, шторы, ноутбуки), предложения по замене оборудования, 3D-визуализация будущего пространства и личный вывод о рациональной организации рабочих мест.</p>
+        <a href="report_volkovaDK.html" class="btn-card">📑 Открыть отчёт →</a>
       </div>
-      <div style="margin-top:14px;">
-        <h3>Назначение рабочего пространства</h3>
-        <textarea id="purpose" placeholder="Кратко опишите, для каких задач используется это место: учёба, документы, аналитика, программирование, графика и т.д.">Описание</textarea>
-      </div>
-    </section>
 
-    <section class="section">
-      <h2>2. Итоги чек-листа</h2>
-      <div class="summary">
-        <div class="sum-card"><strong>Набрано баллов</strong><div class="big" id="sum">—</div></div>
-        <div class="sum-card"><strong>Максимум</strong><div class="big" id="max">—</div></div>
-        <div class="sum-card"><strong>Процент</strong><div class="big" id="percent">—</div></div>
-        <div class="sum-card"><strong>Результат</strong><div id="interp" style="margin-top:8px; font-weight:700;">—</div></div>
+      <!-- карточка Веркеевой -->
+      <div class="card">
+        <div class="badge">⭐ Индивидуальный отчёт</div>
+        <h3>Веркеева Вероника Николаевна</h3>
+        <p>Роль: <strong>смета, аудит, HTML, фото</strong></p>
+        <p>Отчёт содержит детальную фотофиксацию аудитории, расчёт бюджета модернизации (сравнение вариантов без затрат и с закупкой), эргономический анализ и выводы о стоимости владения новой техникой.</p>
+        <a href="report_VirkeevaNN.html" class="btn-card">📑 Открыть отчёт →</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>3. Ключевые наблюдения</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Сильные стороны</h3>
-          <textarea id="strengths" class="small" placeholder="Перенесите из чек-листа или сформулируйте заново."></textarea>
-        </div>
-        <div class="card">
-          <h3>Проблемные зоны</h3>
-          <textarea id="problems" class="small" placeholder="Опишите основные ограничения и слабые места."></textarea>
-        </div>
+  <section class="section">
+    <h2>📌 Как пользоваться страницей</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+      <div style="flex:1; background:#f8fafd; border-radius:18px; padding:18px;">
+        <h3 style="margin-top:0;">🔗 Переход к отчётам</h3>
+        <p>Кликните по кнопке <strong>«Открыть отчёт →»</strong> в любой карточке. Файлы <code>report_volkovaDK.html</code> и <code>report_VirkeevaNN.html</code> должны лежать в той же папке, что и эта страница.</p>
       </div>
-      <div style="margin-top:14px;">
-        <h3>Три улучшения с наибольшим эффектом</h3>
-        <textarea id="improvements" placeholder="Укажите конкретные изменения и ожидаемый результат."></textarea>
+      <div style="flex:1; background:#f8fafd; border-radius:18px; padding:18px;">
+        <h3 style="margin-top:0;">🖨️ Печать / PDF</h3>
+        <p>Чтобы сохранить любой отчёт в PDF, откройте его и нажмите <strong>Ctrl+P</strong> (или «Печать» в меню браузера), выберите «Сохранить как PDF».</p>
       </div>
-    </section>
+    </div>
+    <div class="note" style="margin-top:18px; border-left:4px solid var(--primary); background:#ecf3ff; padding:14px 18px; border-radius:16px;">
+      <strong>💡 Совет:</strong> Все страницы проекта (чек-лист, шаблон отчёта, публикация) связаны между собой, поэтому вы можете свободно возвращаться к выбору отчёта через навигационное меню.
+    </div>
+  </section>
 
-    <section class="section">
-      <h2>4. Проект улучшения</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Что можно улучшить без существенных затрат</h3>
-          <textarea id="noBudget" class="small" placeholder="Например: поднять монитор, изменить расположение клавиатуры, организовать кабели, переставить технику."></textarea>
-        </div>
-        <div class="card">
-          <h3>Что потребует бюджета, но даст заметный эффект</h3>
-          <textarea id="withBudget" class="small" placeholder="Например: заменить монитор, увеличить ОЗУ, поставить SSD, улучшить освещение, сменить стол или кресло."></textarea>
-        </div>
-      </div>
-      <div style="margin-top:14px;">
-        <h3>Обоснование проекта</h3>
-        <textarea id="justification" placeholder="Объясните, почему предложенные улучшения полезны с точки зрения эргономики, техники, производительности, срока службы и рациональности закупки."></textarea>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>5. Визуальные материалы</h2>
-      <p class="lead">Здесь можно вставить реальные фотографии, схему, референсы или оставить место под изображения перед сдачей.</p>
-      <div class="gallery">
-        <div class="ph">Место для изображения 1</div>
-        <div class="ph">Место для изображения 2</div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>6. Итоговый вывод</h2>
-      <textarea id="finalConclusion" placeholder="Сформулируйте короткий вывод: насколько рабочее пространство соответствует задачам, какие у него главные достоинства, какие ограничения и какие улучшения являются наиболее рациональными."></textarea>
-      <div class="note" style="margin-top:14px;"><strong>Совет:</strong> хороший вывод должен соединять наблюдения, баллы, смысловые выводы и реальные предложения по улучшению.</div>
-    </section>
-
-    
-    <section class="section">
-      <h2>7. Публикация итоговой работы</h2>
-      <p class="lead">После заполнения отчёта его можно не только сохранить локально, но и опубликовать как собственный мини-сайт.</p>
-      <div class="note"><strong>Идея:</strong> если вы опубликуете HTML-страницу через GitHub Pages, у вас появится публичная ссылка, которой удобно делиться с преподавателем и использовать в портфолио.</div>
-      <div class="nav" style="margin-top:14px;">
-        <a class="btn primary" href="student_publish_site_guide.html">Открыть инструкцию по публикации</a>
-      </div>
-    </section>
-
-    <div class="footer">Перед сдачей проверьте, что текст ясен, структура логична, а выводы подтверждаются наблюдениями.</div>
+  <div class="footer">
+    Проект ИТ-инфраструктуры и организации рабочего пространства — 2026 | Страница выбора отчётов
   </div>
-
-<script>
-function loadChecklistData(){
-  const raw = localStorage.getItem('workspaceChecklistData');
-  if(!raw) return;
-  try{
-    const data = JSON.parse(raw);
-    document.getElementById('sum').textContent = data.sum || '—';
-    document.getElementById('max').textContent = data.max || '—';
-    document.getElementById('percent').textContent = data.percent || '—';
-    document.getElementById('interp').textContent = data.interpretation || '—';
-    if(!document.getElementById('strengths').value) document.getElementById('strengths').value = data.strengths || '';
-    if(!document.getElementById('problems').value) document.getElementById('problems').value = data.problems || '';
-    if(!document.getElementById('improvements').value) document.getElementById('improvements').value = data.improvements || '';
-  } catch(e){}
-}
-function saveReport(){
-  const ids = ['studentName','objectName','purpose','strengths','problems','improvements','noBudget','withBudget','justification','finalConclusion'];
-  const payload = {};
-  ids.forEach(id => payload[id] = document.getElementById(id).value);
-  localStorage.setItem('workspaceReportDraft', JSON.stringify(payload));
-}
-function loadReport(){
-  const raw = localStorage.getItem('workspaceReportDraft');
-  if(!raw) return;
-  try{
-    const data = JSON.parse(raw);
-    Object.entries(data).forEach(([k,v]) => {
-      const el = document.getElementById(k);
-      if(el && !el.value) el.value = v || '';
-    });
-  } catch(e){}
-}
-document.querySelectorAll('textarea, input[type="text"]').forEach(el => el.addEventListener('input', saveReport));
-loadChecklistData();
-loadReport();
-</script>
+</div>
 </body>
 </html>
